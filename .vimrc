@@ -59,3 +59,6 @@ set list
 " Allow fuzzy search in subfolders
 " initially had . and /usr/include
 set path=.,**
+
+" Some user commands
+:command Bda bufdo e
