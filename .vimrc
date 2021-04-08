@@ -39,8 +39,23 @@ Plug 'tomasiser/vim-code-dark'
 " Tabbing/spacing auto detection
 Plug 'tpope/vim-sleuth'
 
+" Fuzzy searching for files and in file
+" Need ripgrep for this. Check if it exists and if it does,
+" then install. Otherwise output error message.
+" https://github.com/BurntSushi/ripgrep#installation
+" Note: no hidden files right now, can change in config
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+echo "Make sure rg exists or else you'll have no fuzzy in file search!"
+nnoremap <C-p> :Files<Cr>
+nnoremap <C-g> :Rg<Cr>
+
 " Fuzzy searching and other stuff
-Plug 'ctrlpvim/ctrlp.vim' 
+" Plug 'ctrlpvim/ctrlp.vim' 
+
+" Spoke too soon! A JSX plugin exists
+" Some recommendations here: https://github.com/MaxMEllon/vim-jsx-pretty
+Plug 'maxmellon/vim-jsx-pretty'
 
 " Initialize plugin system
 call plug#end()
