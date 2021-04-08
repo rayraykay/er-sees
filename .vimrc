@@ -36,6 +36,12 @@ call plug#begin('~/.vim/vim-plug-plugins')
 
 Plug 'tomasiser/vim-code-dark'
 
+" Tabbing/spacing auto detection
+Plug 'tpope/vim-sleuth'
+
+" Fuzzy searching and other stuff
+Plug 'ctrlpvim/ctrlp.vim' 
+
 " Initialize plugin system
 call plug#end()
 
@@ -53,12 +59,19 @@ set nu rnu
 set listchars=tab:>·,trail:·,extends:·,precedes:·,space:·
 set list
 
-" To do automatic detection of spaces/tabs
-" https://github.com/tpope/vim-sleuth
-
 " Allow fuzzy search in subfolders
 " initially had . and /usr/include
-set path=.,**
+" set path=.,**
+set wildignore+=*.a,*.o
+set wildignore+=*.swp
 
 " Some user commands
 :command Bda bufdo e
+
+" CtrlP settings
+" show hidden files
+" use the directory you started vim in to search out of
+" https://github.com/ctrlpvim/ctrlp.vim
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 0
+
