@@ -55,7 +55,11 @@ nnoremap <C-g> :Rg<Cr>
 
 " Spoke too soon! A JSX plugin exists
 " Some recommendations here: https://github.com/MaxMEllon/vim-jsx-pretty
-Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'maxmellon/vim-jsx-pretty'
+" Using one with TSX support
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+autocmd BufNewFile,BufRead *.tsx,*.jsx,*.tsx.test,*.jsx.test set filetype=typescriptreact
 
 " Initialize plugin system
 call plug#end()
