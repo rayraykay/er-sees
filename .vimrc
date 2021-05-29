@@ -47,7 +47,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 echo "Make sure rg exists or else you'll have no fuzzy in file search!"
-nnoremap <C-p> :Files<Cr>
+nnoremap <C-p> :GFiles<Cr>
 nnoremap <C-g> :Rg<Cr>
 
 " Fuzzy searching and other stuff
