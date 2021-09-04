@@ -61,6 +61,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 autocmd BufNewFile,BufRead *.tsx,*.jsx,*.tsx.test,*.jsx.test set filetype=typescriptreact
 
+" Solidity
+Plug 'tomlion/vim-solidity'
+
 " Initialize plugin system
 call plug#end()
 
