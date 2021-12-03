@@ -49,6 +49,10 @@ Plug 'junegunn/fzf.vim'
 echo "Make sure rg exists or else you'll have no fuzzy in file search!"
 nnoremap <C-p> :GFiles<Cr>
 nnoremap <C-g> :Rg<Cr>
+command! -bang -nargs=* Rg call fzf#vim#grep(
+  \"rg --column --line-number --no-heading --color=always --smart-case "
+  \ .shellescape(<q-args>), 1, fzf#vim#with_preview(
+  \ {'options': '--delimiter : --nth 4..'}), <bang>0)
 
 " Fuzzy searching and other stuff
 " Plug 'ctrlpvim/ctrlp.vim' 
